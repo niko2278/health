@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritual - Essential Multivitamins of High Quality | HealthCompare</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/style.css">
+    
+    <meta name="description" content="Discover Ritual - High-quality essential vitamins with traceable ingredients and science-backed formulas to support your health at every stage of life.">
+    
+    <!-- Custom page styles -->
+    <style>
+        :root {
+            --ritual-blue: #2b95f8;
+            --ritual-dark-blue: #2171b9;
+            --ritual-light-blue: #e8f4fe;
+            --ritual-yellow: #f5c84c;
+            --ritual-light-yellow: #fdf7e7;
+        }
+        
+        .service-hero {
+            background: linear-gradient(135deg, var(--ritual-blue), var(--ritual-dark-blue));
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../../images/hero-pattern.svg');
+            background-repeat: repeat;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .service-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .service-logo img {
+            width: 120px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            background: white;
+            padding: 10px;
+        }
+        
+        .service-details {
+            padding: 60px 0;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+        }
+        
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+        
+        .product-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: var(--ritual-dark-blue);
+        }
+        
+        .product-content p {
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            margin-top: auto;
+            color: var(--ritual-blue);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--ritual-yellow);
+            color: #333;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 20px;
+            z-index: 2;
+        }
+        
+        .brand-values {
+            background-color: var(--ritual-light-blue);
+            padding: 60px 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--ritual-light-blue);
+            color: var(--ritual-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .value-icon svg {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .how-it-works {
+            padding: 60px 0;
+        }
+        
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .step-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--ritual-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .ingredients-section {
+            background-color: var(--ritual-light-yellow);
+            padding: 60px 0;
+        }
+        
+        .ingredient-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .ingredient-card {
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .ingredient-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .ingredient-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            overflow: hidden;
+        }
+        
+        .ingredient-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .ingredient-name {
+            font-weight: 600;
+            color: var(--ritual-dark-blue);
+            margin-bottom: 5px;
+        }
+        
+        .ingredient-source {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        .testimonials-section {
+            padding: 60px 0;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 3rem;
+            color: rgba(43, 149, 248, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-rating {
+            color: var(--ritual-yellow);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .subscription-info {
+            background-color: var(--ritual-light-blue);
+            padding: 60px 0;
+        }
+        
+        .subscription-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .subscription-table th {
+            background: var(--ritual-blue);
+            color: white;
+            text-align: left;
+            padding: 15px;
+        }
+        
+        .subscription-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: white;
+        }
+        
+        .subscription-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .faq-section {
+            padding: 60px 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--ritual-blue);
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 1000px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--ritual-blue), var(--ritual-dark-blue));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .service-logo {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .service-logo img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>HealthCompare</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../comparators/index.html">Product Comparators</a></li>
+                    <li><a href="../blog/index.html">Health Blog</a></li>
+                    <li><a href="../services/index.html">Services</a></li>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../legal/index.html">Legal Notice</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-logo">
+                <img src="../../images/ritual-placeholder.jpg" alt="Ritual Logo">
+                <h1>Ritual</h1>
+            </div>
+            <p class="animate-slide-up">High-quality essential vitamins with traceable ingredients</p>
+            <div class="cta-buttons animate-slide-up delay-200">
+                <a href="#" class="btn btn-white" rel="sponsored">Visit Official Website</a>
+                <a href="#service-details" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-details" class="service-details">
+        <div class="container">
+            <h2 class="text-center">Multivitamins formulated for specific needs</h2>
+            <p class="section-intro">Ritual has reinvented multivitamins by focusing on the nutrients you actually need, with the highest quality ingredients and complete transparency about their origins. Each formula is developed by scientists to address common nutritional deficiencies at different stages of life.</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="product-badge">POPULAR</span>
+                    <div class="product-img">
+                        <img src="../../images/hims-hair-placeholder.jpg" alt="Essential for Women">
+                    </div>
+                    <div class="product-content">
+                        <h3>Essential for Women</h3>
+                        <p>Multivitamins formulated to address common nutritional deficiencies in women aged 18 to 49, supporting bone health, brain function, and energy production.</p>
+                        <div class="product-price">$30/month</div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="../../images/article2-placeholder.jpg" alt="Essential for Men">
+                    </div>
+                    <div class="product-content">
+                        <h3>Essential for Men</h3>
+                        <p>Multivitamins designed for men aged 18 to 49, supporting heart health, muscle function, and energy metabolism.</p>
+                        <div class="product-price">$30/month</div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="../../images/hers-birthcontrol-placeholder.jpg" alt="Essential Prenatal">
+                    </div>
+                    <div class="product-content">
+                        <h3>Essential Prenatal</h3>
+                        <p>Complete prenatal vitamins for women before, during, and after pregnancy, with folic acid, omega-3 DHA, and choline for baby's brain development.</p>
+                        <div class="product-price">$35/month</div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="../../images/ritual-essential-50-placeholder.jpg" alt="Essential for Women 50+">
+                    </div>
+                    <div class="product-content">
+                        <h3>Essential for Women 50+</h3>
+                        <p>Multivitamins tailored to the needs of women over 50, supporting bone health, the immune system, and overall well-being during menopause.</p>
+                        <div class="product-price">$35/month</div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="../../images/ritual-essential-kids-placeholder.jpg" alt="Essential for Kids">
+                    </div>
+                    <div class="product-content">
+                        <h3>Essential for Kids</h3>
+                        <p>Delicious chewable vitamins for children aged 4 and up, with 3-in-1 (multivitamins, omega-3 DHA, and probiotic) to support growth.</p>
+                        <div class="product-price">$30/month</div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="../../images/ritual-essential-protein-placeholder.jpg" alt="Essential Protein">
+                    </div>
+                    <div class="product-content">
+                        <h3>Essential Protein</h3>
+                        <p>Complete plant-based protein powder made from yellow peas, with 20g of protein per serving and a natural vanilla taste - no added sugars.</p>
+                        <div class="product-price">$40/month</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="brand-values">
+        <div class="container">
+            <h2 class="text-center">Ritual Values</h2>
+            <p class="section-intro">Ritual is committed to maintaining the highest standards of quality and transparency so you know exactly what you're putting into your body.</p>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
+                    </div>
+                    <h3>Scientifically Formulated</h3>
+                    <p>Each product is developed by a team of scientists and nutritionists who select only the essential nutrients you need.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </div>
+                    <h3>Complete Transparency</h3>
+                    <p>Full traceability of ingredients down to their source, with detailed information on the origin and form of each nutrient.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3>Rigorous Testing</h3>
+                    <p>Each batch is tested by third-party laboratories to ensure purity, composition, and absence of contaminants. Additional tests are conducted for allergens.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <h3>Globally Sourced Ingredients</h3>
+                    <p>Ritual selects the best ingredients from around the world, prioritizing the most bioavailable forms for optimal absorption.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    </div>
+                    <h3>Science-Based</h3>
+                    <p>All formulations are supported by scientific studies and regularly updated to reflect the latest advances in nutrition.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Recyclable bottles made from recycled plastic, vegan formulas, and minimal impact packaging. Commitment to achieving carbon neutrality by 2025.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="text-center">How It Works</h2>
+            <p class="section-intro">A simple process to integrate Ritual vitamins into your daily routine.</p>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Formula</h3>
+                    <p>Select the multivitamin tailored to your age, gender, and specific needs, designed to address your nutritional deficiencies.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Receive Your Subscription</h3>
+                    <p>Your first bottle is delivered directly to your home in recyclable packaging. Each bottle contains a 30-day supply.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Take Your Vitamins</h3>
+                    <p>Easily integrate Ritual into your daily routine. Two capsules per day, ideally taken at the same time, with or without food.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Automatic Refills</h3>
+                    <p>Receive a new bottle every month so you never run out of vitamins. Modify, pause, or cancel your subscription at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="ingredients-section">
+        <div class="container">
+            <h2 class="text-center">Traceable Ingredients</h2>
+            <p class="section-intro">Each ingredient in Ritual formulas is selected for its quality and effectiveness, with complete transparency about its origin.</p>
+            
+            <div class="ingredient-cards">
+                <div class="ingredient-card">
+                    <div class="ingredient-img">
+                        <img src="../../images/ritual-omega3-placeholder.jpg" alt="Omega-3 DHA">
+                    </div>
+                    <h4 class="ingredient-name">Omega-3 DHA</h4>
+                    <p class="ingredient-source">Microalgae | United Kingdom</p>
+                </div>
+                
+                <div class="ingredient-card">
+                    <div class="ingredient-img">
+                        <img src="../../images/ritual-d3-placeholder.jpg" alt="Vitamin D3">
+                    </div>
+                    <h4 class="ingredient-name">Vitamin D3</h4>
+                    <p class="ingredient-source">Lichen | United States</p>
+                </div>
+                
+                <div class="ingredient-card">
+                    <div class="ingredient-img">
+                        <img src="../../images/ritual-folate-placeholder.jpg" alt="Folate">
+                    </div>
+                    <h4 class="ingredient-name">Folate (5-MTHF)</h4>
+                    <p class="ingredient-source">L-methylfolate | United States</p>
+                </div>
+                
+                <div class="ingredient-card">
+                    <div class="ingredient-img">
+                        <img src="../../images/ritual-b12-placeholder.avif" alt="Vitamin B12">
+                    </div>
+                    <h4 class="ingredient-name">Vitamin B12</h4>
+                    <p class="ingredient-source">Methylcobalamin | United States</p>
+                </div>
+                
+                <div class="ingredient-card">
+                    <div class="ingredient-img">
+                        <img src="../../images/ritual-iron-placeholder.jpg" alt="Iron">
+                    </div>
+                    <h4 class="ingredient-name">Iron</h4>
+                    <p class="ingredient-source">Ferrochel® | United States</p>
+                </div>
+                
+                <div class="ingredient-card">
+                    <div class="ingredient-img">
+                        <img src="../../images/ritual-magnesium-placeholder.webp" alt="Magnesium">
+                    </div>
+                    <h4 class="ingredient-name">Magnesium</h4>
+                    <p class="ingredient-source">Magnesium Citrate | Slovenia</p>
+                </div>
+                
+                <div class="ingredient-card">
+                    <div class="ingredient-img">
+                        <img src="../../images/ritual-vitamin-e-placeholder.jpg" alt="Vitamin E">
+                    </div>
+                    <h4 class="ingredient-name">Vitamin E</h4>
+                    <p class="ingredient-source">Mixed Tocotrienols | Argentina</p>
+                </div>
+                
+                <div class="ingredient-card">
+                    <div class="ingredient-img">
+                        <img src="../../images/ritual-k2-placeholder.jpg" alt="Vitamin K2">
+                    </div>
+                    <h4 class="ingredient-name">Vitamin K2</h4>
+                    <p class="ingredient-source">MK-7 | Norway</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="text-center">What Our Customers Say</h2>
+            <p class="section-intro">Discover the experiences of people who have integrated Ritual into their daily routine.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>"I really appreciate Ritual's transparency about their ingredients and their origins. I've been taking Essential for Women for over a year and have noticed a significant improvement in my daily energy. No more afternoon cravings and my nails are stronger!"</p>
+                    <div class="testimonial-author">
+                        <img src="../../images/testimonial3-placeholder.jpg" alt="Amélie D.">
+                        <div>
+                            <strong>Amélie D.</strong>
+                            <span>Customer for 14 months</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>"As a dad of a 6-year-old boy, I really appreciated finding Essential for Kids. My son loves the taste and it's so much simpler than trying to get him to take multiple vitamins. Plus, no artificial colors or added sugars!"</p>
+                    <div class="testimonial-author">
+                        <img src="../../images/testimonial2-placeholder.jpg" alt="Nicolas T.">
+                        <div>
+                            <strong>Nicolas T.</strong>
+                            <span>Customer for 6 months</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★☆</div>
+                    <p>"I started taking Essential Prenatal when I found out I was pregnant. Unlike other prenatal vitamins I had tried, these didn't make me nauseous and I really appreciate that they're formulated with the active form of folic acid. My only downside is the slightly high price."</p>
+                    <div class="testimonial-author">
+                        <img src="../../images/testimonial1-placeholder.jpg" alt="Marie L.">
+                        <div>
+                            <strong>Marie L.</strong>
+                            <span>Customer for 5 months</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="subscription-info">
+        <div class="container">
+            <h2 class="text-center">Subscription Information</h2>
+            <p class="section-intro">Ritual operates on a flexible monthly subscription model that you can adjust to suit your needs.</p>
+            
+            <table class="subscription-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Delivery Frequency</strong></td>
+                        <td>Monthly (one 30-day bottle)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Shipping Fees</strong></td>
+                        <td>Free shipping</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Subscription Management</strong></td>
+                        <td>Easy modification, pause, or cancellation at any time via your account</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trial Period</strong></td>
+                        <td>30-day money-back guarantee on your first order</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Payment</strong></td>
+                        <td>Monthly automatic debit, credit card, or PayPal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Commitment Discount</strong></td>
+                        <td>-10% for a subscription of 3 months or more</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <p class="section-intro">Find answers to the most common questions about Ritual vitamins.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">When should I take my Ritual vitamins?</div>
+                    <div class="faq-answer">
+                        <p>Ritual recommends taking your vitamins at the same time each day to establish a routine. You can take them with or without food. Many customers prefer to take them in the morning or before bed. Ritual multivitamins are designed with delayed-release technology that helps reduce nausea, even on an empty stomach.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Why are Ritual capsules so different?</div>
+                    <div class="faq-answer">
+                        <p>Ritual capsules use patented "beadlet-in-oil" technology that allows combining water-soluble and fat-soluble ingredients in one capsule, while maintaining their stability and improving absorption. The transparent design lets you see exactly what you're taking. Added peppermint oil helps keep your breath fresh and mask any unpleasant aftertaste.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How long does it take to see results?</div>
+                    <div class="faq-answer">
+                        <p>Vitamins work best when taken regularly over an extended period. Some customers report improvements in energy and vitality after a few weeks, but for more significant changes (such as improved nail quality, hair, or nutritional levels), it is recommended to take the vitamins for at least 3-4 months. Ritual suggests getting a blood test before starting and after a few months to objectively measure improvements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Are Ritual products vegan?</div>
+                    <div class="faq-answer">
+                        <p>Yes, all Ritual products are formulated with 100% vegan ingredients. Omega-3 DHA comes from microalgae rather than fish, and vitamin D3 is extracted from lichen rather than sheep lanolin. Capsules are made from plant-based algae rather than animal gelatin. This approach not only avoids animal products but also reduces potential contaminants like heavy metals often found in fish-based supplements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How can I cancel or modify my subscription?</div>
+                    <div class="faq-answer">
+                        <p>You can manage all aspects of your subscription directly from your online account. To modify, pause, or cancel, log in to your account, go to the "Subscriptions" section, and follow the instructions. You can also contact customer service via email or chat. There are no cancellation fees and no minimum commitment. To ensure changes are applied to the current cycle, make them at least 48 hours before your next billing date.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I take Ritual with other supplements?</div>
+                    <div class="faq-answer">
+                        <p>Ritual multivitamins are designed to provide essential nutrients without the risk of overdose, even in combination with a balanced diet. However, if you are taking other specific supplements or medications, it is recommended to consult your doctor to avoid any potential interactions or excessive intake of certain nutrients. Ritual has deliberately excluded certain nutrients that most people get enough of in their diet, such as vitamin C, to avoid overdose risks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to start your daily ritual?</h2>
+            <p class="mb-4">Try Ritual today with the 30-day money-back guarantee</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-white" rel="sponsored">Visit Ritual</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>HealthCompare</h2>
+                    <p>Your guide to informed health choices</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../comparators/index.html">Comparators</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../services/index.html">Services</a></li>
+                        <li><a href="../about/index.html">About</a></li>
+                        <li><a href="../legal/index.html">Legal Notice</a></li>
+                        <li><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Affiliated Services</h3>
+                    <ul>
+                        <li><a href="teladoc.html" rel="sponsored">Teladoc Health</a></li>
+                        <li><a href="sesamecare.html" rel="sponsored">Sesame Care</a></li>
+                        <li><a href="everlywell.html" rel="sponsored">Everlywell</a></li>
+                        <li><a href="letsgetchecked.html" rel="sponsored">LetsGetChecked</a></li>
+                        <li><a href="hims-hers.html" rel="sponsored">Hims / Hers</a></li>
+                        <li><a href="smiledirectclub.html" rel="sponsored">SmileDirectClub</a></li>
+                        <li><a href="ritual.html" rel="sponsored">Ritual</a></li>
+                        <li><a href="iHerb.html" rel="sponsored">iHerb</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: info@healthcompare.com</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <span class="visually-hidden">Facebook</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <span class="visually-hidden">Twitter</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <span class="visually-hidden">Instagram</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="affiliate-disclosure" role="note">This site contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.</p>
+                <p class="copyright">&copy; 2025 HealthCompare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/affiliate-tracking.js"></script>
+    <script src="../../js/analytics.js"></script>
+    <script src="../../js/mobile-menu.js" ></script>
+    <script>
+        // Initialize FAQ toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

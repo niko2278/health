@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everlywell - At-Home Health Testing Kits | HealthCompare</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/style.css">
+    
+    <meta name="description" content="Discover Everlywell's at-home health testing kits for food sensitivity, hormone levels, and more. Convenient, accurate, and easy to use.">
+    
+    <!-- Custom page styles -->
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../../images/hero-pattern.svg');
+            background-repeat: repeat;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .service-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .service-logo img {
+            width: 120px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            background: white;
+            padding: 10px;
+        }
+        
+        .service-details {
+            padding: 60px 0;
+        }
+        
+        .test-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-card);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+        }
+        
+        .category-img {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .category-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .category-card:hover .category-img img {
+            transform: scale(1.05);
+        }
+        
+        .category-content {
+            padding: 20px;
+        }
+        
+        .category-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .how-it-works {
+            background-color: var(--light-background);
+            padding: 60px 0;
+        }
+        
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .step-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .popular-tests {
+            padding: 60px 0;
+        }
+        
+        .test-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .test-table th {
+            background: var(--secondary-color);
+            color: white;
+            text-align: left;
+            padding: 15px;
+        }
+        
+        .test-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .test-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .test-table tr:nth-child(even) {
+            background-color: var(--light-background);
+        }
+        
+        .test-price {
+            font-weight: bold;
+        }
+        
+        .test-badges {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        
+        .faq-section {
+            background-color: var(--light-background);
+            padding: 60px 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 1000px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .service-logo {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .service-logo img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .test-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>HealthCompare</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../comparators/index.html">Product Comparators</a></li>
+                    <li><a href="../blog/index.html">Health Blog</a></li>
+                    <li><a href="../services/index.html">Services</a></li>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../legal/index.html">Legal Notice</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-logo">
+                <img src="../../images/everlywell-placeholder.png" alt="Everlywell Logo">
+                <h1>Everlywell</h1>
+            </div>
+            <p class="animate-slide-up">At-home health testing kits for a healthier you</p>
+            <div class="cta-buttons animate-slide-up delay-200">
+                <a href="#" class="btn btn-white" rel="sponsored">Visit Official Website</a>
+                <a href="#service-details" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-details" class="service-details">
+        <div class="container">
+            <h2 class="text-center">Why Choose Everlywell?</h2>
+            <p class="section-intro">Everlywell offers clinically validated at-home health tests that provide valuable insights into your health without a doctor's appointment. Their tests are developed by medical experts and use certified labs to deliver reliable results.</p>
+            
+            <div class="test-categories">
+                <div class="category-card animate-on-scroll" data-animation="fade-in">
+                    <div class="category-img">
+                        <img src="../../images/everlywell-hormones-placeholder.jpg" alt="Hormone Tests">
+                    </div>
+                    <div class="category-content">
+                        <h3>Hormone Tests</h3>
+                        <p>Check your thyroid hormones, testosterone, estrogen levels, and more to understand your hormonal balance.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card animate-on-scroll" data-animation="fade-in" data-delay="0.1">
+                    <div class="category-img">
+                        <img src="../../images/everlywell-metabolic-placeholder.jpg" alt="Metabolic Health Tests">
+                    </div>
+                    <div class="category-content">
+                        <h3>Metabolic Health</h3>
+                        <p>Assess your cholesterol, blood sugar, and other important metabolic markers for cardiovascular health.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card animate-on-scroll" data-animation="fade-in" data-delay="0.2">
+                    <div class="category-img">
+                        <img src="../../images/everlywell-sexual-placeholder.jpg" alt="STI Tests">
+                    </div>
+                    <div class="category-content">
+                        <h3>Sexual Health</h3>
+                        <p>Test for multiple sexually transmitted infections in the privacy of your home with confidential results.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card animate-on-scroll" data-animation="fade-in" data-delay="0.3">
+                    <div class="category-img">
+                        <img src="../../images/everlywell-vitamin-placeholder.jpg" alt="Vitamin Tests">
+                    </div>
+                    <div class="category-content">
+                        <h3>Vitamins and Nutrition</h3>
+                        <p>Find out if you have deficiencies in essential vitamins like Vitamin D, B12, or other important nutrients.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card animate-on-scroll" data-animation="fade-in" data-delay="0.4">
+                    <div class="category-img">
+                        <img src="../../images/everlywell-allergies-placeholder.jpg" alt="Allergy Tests">
+                    </div>
+                    <div class="category-content">
+                        <h3>Allergy Tests</h3>
+                        <p>Identify your food and environmental allergies to better understand your allergy triggers.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card animate-on-scroll" data-animation="fade-in" data-delay="0.5">
+                    <div class="category-img">
+                        <img src="../../images/everlywell-general-placeholder.jpg" alt="General Health">
+                    </div>
+                    <div class="category-content">
+                        <h3>General Health</h3>
+                        <p>Comprehensive tests that examine multiple aspects of your health for an overall assessment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="text-center">How It Works</h2>
+            <p class="section-intro">Everlywell makes health testing easy, convenient, and accessible. Here's how you can get professional-grade lab results from your home.</p>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Order Your Test</h3>
+                    <p>Choose the test that fits your needs and have it delivered directly to your home in discreet packaging.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Collect Your Sample</h3>
+                    <p>Follow the simple instructions to collect your sample (blood, urine, saliva, or other depending on the test).</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Send Back Your Kit</h3>
+                    <p>Use the prepaid packaging to send your sample to the certified lab for analysis.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Receive Your Results</h3>
+                    <p>Access your detailed results online with clear explanations and personalized recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="popular-tests">
+        <div class="container">
+            <h2 class="text-center">Popular Tests</h2>
+            <p class="section-intro">Explore some of the most requested tests from Everlywell and their features.</p>
+            
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th>Test</th>
+                        <th>What is Analyzed</th>
+                        <th>Indicative Price</th>
+                        <th>Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vitamin D Test</td>
+                        <td>Vitamin D levels in the blood</td>
+                        <td class="test-price">~49$</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Simple</span>
+                                <span class="badge badge-secondary">Blood Sample</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Metabolic Panel</td>
+                        <td>Cholesterol, triglycerides, glucose, HbA1c</td>
+                        <td class="test-price">~89$</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Comprehensive</span>
+                                <span class="badge badge-secondary">Blood Sample</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Thyroid Test</td>
+                        <td>TSH, T3, T4, antibodies</td>
+                        <td class="test-price">~99$</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Detailed</span>
+                                <span class="badge badge-secondary">Blood Sample</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Comprehensive STI Test</td>
+                        <td>Chlamydia, gonorrhea, syphilis, HIV, etc.</td>
+                        <td class="test-price">~149$</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Confidential</span>
+                                <span class="badge badge-secondary">Multi-Sample</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Food Allergy Test</td>
+                        <td>96 common foods</td>
+                        <td class="test-price">~199$</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Comprehensive</span>
+                                <span class="badge badge-secondary">Blood Sample</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Women's Hormonal Panel</td>
+                        <td>Estrogen, progesterone, testosterone, etc.</td>
+                        <td class="test-price">~129$</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Detailed</span>
+                                <span class="badge badge-secondary">Blood Sample</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p class="mt-3"><small>* Prices are approximate and may vary. Please visit Everlywell's official website for current pricing.</small></p>
+        </div>
+    </section>
+    
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <p class="section-intro">Here are answers to the most common questions about Everlywell's services.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Are Everlywell tests reliable?</div>
+                    <div class="faq-answer">
+                        <p>Yes, all Everlywell tests are clinically validated and analyzed in CLIA-certified laboratories that meet the same standards used by doctors. Results are reviewed by independent physicians before being made available to you.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Are the tests covered by health insurance?</div>
+                    <div class="faq-answer">
+                        <p>Currently, most Everlywell tests are not directly reimbursed by health insurance or social security. However, some tests may be eligible for reimbursement through certain health savings accounts (FSA/HSA) depending on your country. We recommend contacting your insurer for more information.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How are the results presented?</div>
+                    <div class="faq-answer">
+                        <p>Results are presented in a secure digital dashboard with clear explanations of your values, reference ranges to understand where you stand, and information on possible actions you might consider based on your results. In some cases, personalized recommendations are provided.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How long does it take to receive results?</div>
+                    <div class="faq-answer">
+                        <p>Once your sample is received by the lab, results are typically available within 5 to 7 business days. You will receive an email notification when your results are ready to be viewed in your online account.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is it difficult to collect samples yourself?</div>
+                    <div class="faq-answer">
+                        <p>Everlywell kits are designed to be easy to use, even without medical experience. Each kit contains detailed step-by-step instructions, and customer service is available to assist you if you have questions. Collection methods vary by test (finger prick, swab, saliva, or urine sample), but are all designed to be simple and painless.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What should I do if my results are abnormal?</div>
+                    <div class="faq-answer">
+                        <p>If your results are abnormal, Everlywell will provide information on the meaning of these results and recommended next steps. For some tests, you may have the option to discuss your results with a healthcare professional. In all cases, we recommend sharing your results with your primary care physician, especially if abnormalities are detected.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Take Control of Your Health Today</h2>
+            <p>Order an Everlywell test and discover valuable insights into your health from the comfort of your home.</p>
+            <div class="cta-buttons mt-4">
+                <a href="#" class="btn btn-white" rel="sponsored">Visit Everlywell</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>HealthCompare</h2>
+                    <p>Your guide to informed health choices</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../comparators/index.html">Comparators</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../services/index.html">Services</a></li>
+                        <li><a href="../about/index.html">About</a></li>
+                        <li><a href="../legal/index.html">Legal Notice</a></li>
+                        <li><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Affiliated Services</h3>
+                    <ul>
+                        <li><a href="teladoc.html" rel="sponsored">Teladoc Health</a></li>
+                        <li><a href="sesamecare.html" rel="sponsored">Sesame Care</a></li>
+                        <li><a href="everlywell.html" rel="sponsored">Everlywell</a></li>
+                        <li><a href="letsgetchecked.html" rel="sponsored">LetsGetChecked</a></li>
+                        <li><a href="hims-hers.html" rel="sponsored">Hims / Hers</a></li>
+                        <li><a href="smiledirectclub.html" rel="sponsored">SmileDirectClub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: info@healthcompare.com</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <span class="visually-hidden">Facebook</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <span class="visually-hidden">Twitter</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <span class="visually-hidden">Instagram</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="affiliate-disclosure" role="note">This site contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.</p>
+                <p class="copyright">&copy; 2025 HealthCompare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/affiliate-tracking.js"></script>
+    <script src="../../js/analytics.js"></script>
+    <script src="../../js/mobile-menu.js"></script>
+    <script>
+        // Initialize FAQ toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

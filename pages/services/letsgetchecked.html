@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsGetChecked - At-Home Health Testing Kits | HealthCompare</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../css/style.css">
+    
+    <meta name="description" content="Explore LetsGetChecked's at-home health testing kits for cholesterol, thyroid, sexual health, and more. Convenient, accurate, and private.">
+    
+    <!-- Custom page styles -->
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../../images/hero-pattern.svg');
+            background-repeat: repeat;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .service-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .service-logo img {
+            width: 120px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            background: white;
+            padding: 10px;
+        }
+        
+        .service-details {
+            padding: 60px 0;
+        }
+        
+        .test-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-card);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+        }
+        
+        .category-img {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .category-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .category-card:hover .category-img img {
+            transform: scale(1.05);
+        }
+        
+        .category-content {
+            padding: 20px;
+        }
+        
+        .category-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .feature-list {
+            padding: 60px 0;
+            background-color: var(--light-background);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 107, 107, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon svg {
+            color: #FF6B6B;
+            width: 30px;
+            height: 30px;
+        }
+        
+        .how-it-works {
+            padding: 60px 0;
+        }
+        
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .step-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #FF6B6B;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .test-comparison {
+            padding: 60px 0;
+            background-color: var(--light-background);
+        }
+        
+        .test-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .test-table th {
+            background: #FF6B6B;
+            color: white;
+            text-align: left;
+            padding: 15px;
+        }
+        
+        .test-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .test-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .test-table tr:nth-child(even) {
+            background-color: rgba(255, 107, 107, 0.05);
+        }
+        
+        .testimonials-section {
+            padding: 60px 0;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 3rem;
+            color: rgba(255, 107, 107, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-rating {
+            color: #F59E0B;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .faq-section {
+            background-color: var(--light-background);
+            padding: 60px 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #FF6B6B;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 1000px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+        }
+        
+        .test-badges {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .service-logo {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .service-logo img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .test-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>HealthCompare</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../comparators/index.html">Product Comparators</a></li>
+                    <li><a href="../blog/index.html">Health Blog</a></li>
+                    <li><a href="../services/index.html">Services</a></li>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../legal/index.html">Legal Notice</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-logo">
+                <img src="../../images/letsgetchecked-placeholder.png" alt="LetsGetChecked Logo">
+                <h1>LetsGetChecked</h1>
+            </div>
+            <p class="animate-slide-up">At-home health testing kits for a healthier you</p>
+            <div class="cta-buttons animate-slide-up delay-200">
+                <a href="#" class="btn btn-white" rel="sponsored">Visit Official Website</a>
+                <a href="#service-details" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-details" class="service-details">
+        <div class="container">
+            <h2 class="text-center">Take Control of Your Health from Home</h2>
+            <p class="section-intro">LetsGetChecked offers a wide range of at-home health testing kits designed to provide accurate and reliable results. From cholesterol levels to sexual health, LetsGetChecked empowers you to take charge of your health with convenience and privacy.</p>
+            
+            <div class="test-categories">
+                <div class="category-card animate-on-scroll" data-animation="fade-in">
+                    <div class="category-img">
+                        <img src="../../images/everlywell-sexual-placeholder.jpg" alt="Sexual Health">
+                    </div>
+                    <div class="category-content">
+                        <h3>Sexual Health</h3>
+                        <p>Confidential tests for various STIs, from simple screening to complete panels, with results in just a few days.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card animate-on-scroll" data-animation="fade-in" data-delay="0.1">
+                    <div class="category-img">
+                        <img src="../../images/everlywell-general-placeholder.jpg" alt="Diabetes and Cholesterol">
+                    </div>
+                    <div class="category-content">
+                        <h3>Cardiometabolic Health</h3>
+                        <p>Monitor your blood sugar, cholesterol, and other cardiovascular markers for better health management.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card animate-on-scroll" data-animation="fade-in" data-delay="0.2">
+                    <div class="category-img">
+                        <img src="../../images/everlywell-hormones-placeholder.jpg" alt="Hormonal Tests">
+                    </div>
+                    <div class="category-content">
+                        <h3>Hormonal Balance</h3>
+                        <p>Tests for women and men to evaluate hormonal imbalances that may affect your overall well-being.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card animate-on-scroll" data-animation="fade-in" data-delay="0.3">
+                    <div class="category-img">
+                        <img src="../../images/everlywell-allergies-placeholder.jpg" alt="Vitamin Deficiencies">
+                    </div>
+                    <div class="category-content">
+                        <h3>Vitamins and Nutrition</h3>
+                        <p>Identify deficiencies in essential nutrients like Vitamin D, B12, iron, and other important minerals.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card animate-on-scroll" data-animation="fade-in" data-delay="0.4">
+                    <div class="category-img">
+                        <img src="../../images/health-tests-placeholder.jpg" alt="Gut Health">
+                    </div>
+                    <div class="category-content">
+                        <h3>Digestive Health</h3>
+                        <p>Early screening tests for various digestive issues, including colorectal cancer screening.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card animate-on-scroll" data-animation="fade-in" data-delay="0.5">
+                    <div class="category-img">
+                        <img src="../../images/article3-placeholder.jpg" alt="Thyroid Health">
+                    </div>
+                    <div class="category-content">
+                        <h3>Thyroid Health</h3>
+                        <p>Evaluate your thyroid function with comprehensive tests to detect potential issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="feature-list">
+        <div class="container">
+            <h2 class="text-center">What Sets LetsGetChecked Apart</h2>
+            <p class="section-intro">LetsGetChecked stands out with its comprehensive approach combining medical-grade tests and personalized follow-up.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3>Dedicated Medical Team</h3>
+                    <p>Access to qualified nurses and doctors to discuss your results and next steps.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3>Certified Laboratories</h3>
+                    <p>All samples are analyzed in state-of-the-art certified labs to ensure accurate results.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <h3>Fast Results</h3>
+                    <p>Receive your results online within 2 to 5 days after your sample is received by the lab.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"></path></svg>
+                    </div>
+                    <h3>Medical Prescription Included</h3>
+                    <p>Tests requiring a prescription are automatically reviewed by a partner physician at no extra cost.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <h3>Personalized Follow-Up</h3>
+                    <p>For abnormal results, a healthcare professional contacts you to discuss next steps and possible treatments.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    </div>
+                    <h3>Treatment Options</h3>
+                    <p>For certain conditions, LetsGetChecked can prescribe treatments and deliver them directly to your home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="text-center">How It Works</h2>
+            <p class="section-intro">A simple 4-step process to take charge of your health from home.</p>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Order Your Test</h3>
+                    <p>Choose the test that suits you and receive it directly at your home in discreet packaging within 1-2 business days.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Activate Your Kit</h3>
+                    <p>Register your kit online with the unique code provided and complete a brief medical questionnaire to contextualize your results.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Collect Your Sample</h3>
+                    <p>Follow the detailed instructions to collect your sample (usually in the morning) and return it free of charge using the prepaid envelope.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Receive Your Results</h3>
+                    <p>View your secure results online within 2-5 days, with medical follow-up for abnormal results and personalized recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="test-comparison">
+        <div class="container">
+            <h2 class="text-center">Popular Tests</h2>
+            <p class="section-intro">Here is a selection of the most requested tests at LetsGetChecked with their features.</p>
+            
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th>Test Name</th>
+                        <th>What It Analyzes</th>
+                        <th>Indicative Price</th>
+                        <th>Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Complete STI Test</td>
+                        <td>Chlamydia, Gonorrhea, Trichomonas, HIV, Syphilis, and more</td>
+                        <td>~$179</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Comprehensive</span>
+                                <span class="badge badge-secondary">Confidential</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Thyroid Panel</td>
+                        <td>TSH, T4, T3, Antibodies</td>
+                        <td>~$99</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Detailed</span>
+                                <span class="badge badge-secondary">Medical Follow-Up</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Colon Test</td>
+                        <td>Screening for occult blood in stool</td>
+                        <td>~$49</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Preventive</span>
+                                <span class="badge badge-secondary">Non-Invasive</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lipid Panel</td>
+                        <td>Total Cholesterol, HDL, LDL, Triglycerides</td>
+                        <td>~$89</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Cardio</span>
+                                <span class="badge badge-secondary">Fasting Required</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vitamin D</td>
+                        <td>Level of 25-hydroxyvitamin D</td>
+                        <td>~$59</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Nutrition</span>
+                                <span class="badge badge-secondary">Simple</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Testosterone</td>
+                        <td>Total Testosterone Level</td>
+                        <td>~$69</td>
+                        <td>
+                            <div class="test-badges">
+                                <span class="badge badge-primary">Hormonal</span>
+                                <span class="badge badge-secondary">For Men</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p class="mt-3 text-center"><small>* Prices are approximate and may vary. Please visit LetsGetChecked's official website for current rates.</small></p>
+        </div>
+    </section>
+    
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="text-center">Customer Testimonials</h2>
+            <p class="section-intro">Discover how LetsGetChecked has helped others take charge of their health.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>"I used LetsGetChecked to monitor my iron levels due to chronic anemia. The process was simple, the instructions clear, and I received my results quickly. The most impressive part was the call from a nurse to discuss my results and treatment plan."</p>
+                    <div class="testimonial-author">
+                        <img src="../../images/testimonial1-placeholder.jpg" alt="Laura D.">
+                        <div>
+                            <strong>Laura D.</strong>
+                            <span>Regular User</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p>"As a frequent traveler, it's difficult for me to regularly visit my doctor. LetsGetChecked's general health test allowed me to track important health markers without disrupting my busy schedule. Being able to take the test over the weekend is a huge advantage."</p>
+                    <div class="testimonial-author">
+                        <img src="../../images/testimonial2-placeholder.jpg" alt="Marc T.">
+                        <div>
+                            <strong>Marc T.</strong>
+                            <span>User Since 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★☆</div>
+                    <p>"I was nervous about taking an STI screening test, but LetsGetChecked provided a discreet and judgment-free solution. The results arrived quickly, and I was able to discuss my options with a healthcare professional. The blood sample collection was a bit tricky, but the instructions were clear."</p>
+                    <div class="testimonial-author">
+                        <img src="../../images/testimonial3-placeholder.jpg" alt="Sophie R.">
+                        <div>
+                            <strong>Sophie R.</strong>
+                            <span>New User</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <p class="section-intro">Here are answers to the most common questions about LetsGetChecked.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Are LetsGetChecked tests reliable?</div>
+                    <div class="faq-answer">
+                        <p>Yes, all LetsGetChecked tests are clinically validated and analyzed in certified laboratories according to the highest standards. The analysis methods are the same as those used in hospitals and clinics. To ensure accuracy, each test includes detailed instructions on the optimal time to collect the sample and factors that may affect the results.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How is the sample collected?</div>
+                    <div class="faq-answer">
+                        <p>The collection method depends on the type of test. For blood tests, the kit includes a finger-prick device with step-by-step instructions. For STI tests, depending on the chosen test, it may involve a urine sample, vaginal swab, or blood sample. All kits contain detailed instructions, and assistance is available by phone or chat if you have questions during the process.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is the service truly confidential?</div>
+                    <div class="faq-answer">
+                        <p>LetsGetChecked guarantees complete confidentiality. Kits are delivered in discreet packaging without any mention of their contents. Your results are protected by encryption and are only accessible to you and LetsGetChecked's medical team. No information is shared with third parties, including your primary care physician, without your explicit consent.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What happens if my results are abnormal?</div>
+                    <div class="faq-answer">
+                        <p>If your results are abnormal, a member of LetsGetChecked's medical team will contact you by phone to discuss your results in detail, answer your questions, and advise you on next steps. For certain conditions (such as treatable STIs), they can even prescribe treatment and ship it directly to your home if necessary. You will also receive a report that you can share with your primary care physician.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Are LetsGetChecked tests covered by health insurance?</div>
+                    <div class="faq-answer">
+                        <p>Generally, LetsGetChecked tests are not directly reimbursed by standard health insurance plans or social security. However, some private insurance providers may partially cover these tests under certain conditions. It is recommended to contact your insurance provider directly to verify your coverage. LetsGetChecked can provide a detailed invoice to facilitate your reimbursement request.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How long does it take to receive results?</div>
+                    <div class="faq-answer">
+                        <p>Once your sample is received by the laboratory, results are typically available within 2 to 5 business days, depending on the type of test. You will receive an email notification when your results are ready to be viewed on your secure online account. For positive or abnormal results requiring immediate attention, you will be contacted directly by the medical team, usually within 24 hours of obtaining the results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Take the First Step Towards Better Health</h2>
+            <p>Order your LetsGetChecked at-home health testing kit today and gain valuable insights into your health.</p>
+            <div class="cta-buttons mt-4">
+                <a href="#" class="btn btn-white" rel="sponsored">Visit LetsGetChecked</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>HealthCompare</h2>
+                    <p>Your guide to informed health choices</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../comparators/index.html">Comparators</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../services/index.html">Services</a></li>
+                        <li><a href="../about/index.html">About</a></li>
+                        <li><a href="../legal/index.html">Legal Notice</a></li>
+                        <li><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Affiliated Services</h3>
+                    <ul>
+                        <li><a href="teladoc.html" rel="sponsored">Teladoc Health</a></li>
+                        <li><a href="sesamecare.html" rel="sponsored">Sesame Care</a></li>
+                        <li><a href="everlywell.html" rel="sponsored">Everlywell</a></li>
+                        <li><a href="letsgetchecked.html" rel="sponsored">LetsGetChecked</a></li>
+                        <li><a href="hims-hers.html" rel="sponsored">Hims / Hers</a></li>
+                        <li><a href="smiledirectclub.html" rel="sponsored">SmileDirectClub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: info@healthcompare.com</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <span class="visually-hidden">Facebook</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <span class="visually-hidden">Twitter</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <span class="visually-hidden">Instagram</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="affiliate-disclosure" role="note">This site contains affiliate links. We may earn a commission if you purchase through these links, at no additional cost to you.</p>
+                <p class="copyright">&copy; 2025 HealthCompare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/affiliate-tracking.js"></script>
+    <script src="../../js/analytics.js"></script>
+    <script src="../../js/mobile-menu.js"></script>
+    <script>
+        // Initialize FAQ toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
