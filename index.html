@@ -3,27 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthCompare - Health Products and Services Comparator</title>
-    
+    <title>HealthCompare - Compare Health Products & Save | Trusted Reviews 2025</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Expert health product comparisons & unbiased reviews. Save up to 70% on prescriptions, dental care, and at-home health tests. Trusted by thousands of users since 2023.">
+    <meta name="keywords" content="health product reviews, save on medical products, prescription discount card, dental aligners comparison, health tests, telemedicine comparison">
+    <meta name="author" content="HealthCompare">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://www.healthcompare.com/">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.healthcompare.com/">
+    <meta property="og:title" content="Compare Health Products & Save | HealthCompare">
+    <meta property="og:description" content="Expert health product comparisons & unbiased reviews. Save up to 70% on prescriptions, dental care, and at-home health tests.">
+    <meta property="og:image" content="https://www.healthcompare.com/images/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="HealthCompare">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Compare Health Products & Save | HealthCompare">
+    <meta name="twitter:description" content="Expert health product comparisons & unbiased reviews. Save up to 70% on prescriptions, dental care, and at-home health tests.">
+    <meta name="twitter:image" content="https://www.healthcompare.com/images/twitter-image.jpg">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <meta name="theme-color" content="#2563eb">
-    
-    <!-- Google Fonts -->
+
+    <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <meta name="description" content="Unbiased comparisons and guides to help you make the best health decisions">
-    
+
     <!-- Visual enhancements and animations only -->
     <script src="js/animations.js" defer></script>
     <script src="js/testimonial-manager.js" defer></script>
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HealthCompare",
+      "url": "https://www.healthcompare.com",
+      "logo": "https://www.healthcompare.com/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/healthcompare",
+        "https://www.twitter.com/healthcompare",
+        "https://www.instagram.com/healthcompare"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-123-4567",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      },
+      "description": "HealthCompare provides unbiased comparisons and guides to help you make the best health decisions."
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.healthcompare.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.healthcompare.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Promotion Popup -->
@@ -40,18 +100,18 @@
     <header>
         <div class="container">
             <div class="logo">
-                <h1>HealthCompare</h1>
+                <h1><a href="index.html" title="HealthCompare - Health Products Comparison Site">HealthCompare</a></h1>
             </div>
-            <nav>
+            <nav aria-label="Main Navigation">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="pages/comparators/index.html">Comparators</a></li>
                     <li><a href="pages/blog/index.html">Blog</a></li>
                     <li><a href="pages/services/index.html">Services</a></li>
                     <li><a href="pages/about/index.html">About</a></li>
                     <li><a href="pages/legal/index.html">Legal</a></li>
                     <li><a href="pages/contact/index.html">Contact</a></li>
-                    <li><a href="#prescription-discount-card">Prescription Discount Card</a></li>
+                    <li><a href="#prescription-discount-card" class="highlight-link">Prescription Discount Card</a></li>
                 </ul>
             </nav>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -59,6 +119,22 @@
                 <span></span>
                 <span></span>
             </button>
+        </div>
+
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumbs-container">
+            <div class="container">
+                <nav aria-label="Breadcrumb" class="breadcrumbs">
+                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a href="index.html" itemprop="item">
+                                <span itemprop="name">Home</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                    </ol>
+                </nav>
+            </div>
         </div>
     </header>
     <section class="hero animate-on-scroll" data-animation="fade-in">
@@ -87,15 +163,21 @@
                 <p>Our comparators help you choose the best health products tailored to your needs and budget.</p>
             </div>
             <div class="comparison-grid">
-                <div class="comparison-card" data-dynamic-content data-skeleton-type="card" data-animation="fade-in" data-delay="0.1">
+                <div class="comparison-card" data-dynamic-content data-skeleton-type="card" data-animation="fade-in" data-delay="0.1" itemscope itemtype="https://schema.org/Product">
                     <div class="card-img-container">
-                        <img data-src="images/aligners-placeholder.jpg" alt="Dental Aligners" loading="lazy">
+                        <img data-src="images/aligners-placeholder.jpg" alt="Best Dental Aligners Comparison Guide - Invisalign vs SmileDirectClub vs Byte Invisible Braces" loading="lazy" width="300" height="200" itemprop="image">
                     </div>
                     <div class="card-content">
-                        <h3>Dental Aligners</h3>
-                        <p>Compare the best invisible aligners on the market for a perfect smile</p>
+                        <h3 itemprop="name">Dental Aligners Comparison</h3>
+                        <p itemprop="description">Compare the best invisible aligners on the market for a perfect smile - expert reviews of leading brands like Invisalign, SmileDirectClub and Byte</p>
+                        <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                            <meta itemprop="lowPrice" content="1495">
+                            <meta itemprop="highPrice" content="8000">
+                            <meta itemprop="priceCurrency" content="USD">
+                            <meta itemprop="offerCount" content="5">
+                        </div>
                         <div class="card-footer">
-                            <a href="pages/comparators/aligners.html" class="btn btn-small btn-primary">Compare</a>
+                            <a href="pages/comparators/aligners.html" class="btn btn-small btn-primary" itemprop="url">Compare Now</a>
                         </div>
                     </div>
                 </div>
@@ -134,20 +216,29 @@
                 <p>Trending health products and services that our users are searching for the most this month.</p>
             </div>
             <div class="popular-grid">
-                <div class="popular-card" data-animation="fade-in" data-delay="0.1">
+                <div class="popular-card" data-animation="fade-in" data-delay="0.1" itemscope itemtype="https://schema.org/MedicalWebPage">
                     <div class="card-img-container">
-                        <img src="images/ozempic-placeholder.jpeg" alt="Ozempic" loading="lazy">
+                        <img src="images/ozempic-placeholder.jpeg" alt="Ozempic (semaglutide) - Complete Guide for Weight Loss and Diabetes Management" loading="lazy" width="300" height="200" itemprop="image">
                         <span class="trending-badge">Trending</span>
                     </div>
                     <div class="card-content">
-                        <h3>Ozempic</h3>
-                        <p>Popular medication for diabetes management and weight loss</p>
+                        <meta itemprop="specialty" content="EndocrinologyAndMetabolism">
+                        <h3 itemprop="headline">Ozempic Guide 2025</h3>
+                        <p itemprop="abstract">Comprehensive guide to Ozempic (semaglutide) for diabetes management and weight loss - expert analysis of benefits, costs, side effects, and alternatives</p>
                         <div class="tags">
-                            <span class="badge badge-primary">Weight Loss</span>
-                            <span class="badge badge-secondary">Diabetes</span>
+                            <span class="badge badge-primary" itemprop="keywords">Weight Loss</span>
+                            <span class="badge badge-secondary" itemprop="keywords">Diabetes</span>
+                        </div>
+                        <div itemprop="about" itemscope itemtype="https://schema.org/Drug">
+                            <meta itemprop="name" content="Ozempic">
+                            <meta itemprop="activeIngredient" content="Semaglutide">
+                            <meta itemprop="clinicalPharmacology" content="GLP-1 receptor agonist for type 2 diabetes and weight management">
+                            <div itemprop="relevantSpecialty" itemscope itemtype="https://schema.org/MedicalSpecialty">
+                                <meta itemprop="name" content="EndocrinologyAndMetabolism">
+                            </div>
                         </div>
                         <div class="card-footer">
-                            <a href="pages/blog/ozempic-guide.html" class="btn btn-small btn-primary">Learn More</a>
+                            <a href="pages/blog/ozempic-guide.html" class="btn btn-small btn-primary" itemprop="url">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -267,35 +358,67 @@
     <section class="testimonials section-light animate-on-scroll" data-animation="fade-in">
         <div class="container">
             <h2>What Our Users Say</h2>
-            <div class="testimonial-slider" data-dynamic-content>
-                <div class="testimonial animate-fade-in">
-                    <p>"Thanks to HealthCompare's dental aligner comparison, I was able to choose the solution that perfectly matched my needs and budget. The decision-making process was so much easier!"</p>
-                    <div class="testimonial-author">
-                        <img data-src="images/testimonial1-placeholder.jpg" alt="Marie L." class="testimonial-avatar">
+            <div class="testimonial-slider" data-dynamic-content itemscope itemtype="https://schema.org/ItemList">
+                <meta itemprop="itemListOrder" content="https://schema.org/ItemListUnordered">
+                <meta itemprop="numberOfItems" content="3">
+
+                <div class="testimonial animate-fade-in" itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
+                    <meta itemprop="position" content="1">
+                    <p itemprop="reviewBody">"Thanks to HealthCompare's dental aligner comparison, I was able to choose the solution that perfectly matched my needs and budget. The decision-making process was so much easier!"</p>
+                    <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <img data-src="images/testimonial1-placeholder.jpg" alt="Testimonial from Marie L. about dental aligners comparison" class="testimonial-avatar" width="60" height="60" itemprop="image">
                         <div>
-                            <strong>Marie L.</strong>
+                            <strong itemprop="name">Marie L.</strong>
                             <span>User since 2024</span>
+                            <meta itemprop="datePublished" content="2024-03-15">
                         </div>
                     </div>
-                </div>
-                <div class="testimonial">
-                    <p>"The articles on the HealthCompare blog are a goldmine of information. I learned so much about at-home health tests and was able to make informed choices for my family."</p>
-                    <div class="testimonial-author">
-                        <img data-src="images/testimonial2-placeholder.jpg" alt="Thomas R." class="testimonial-avatar">
-                        <div>
-                            <strong>Thomas R.</strong>
-                            <span>User since 2023</span>
-                        </div>
+                    <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Service">
+                        <meta itemprop="name" content="HealthCompare Dental Aligners Comparison">
+                    </div>
+                    <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
                     </div>
                 </div>
-                <div class="testimonial">
-                    <p>"The service recommendations are really relevant. I tried Teladoc on your advice and am impressed by the quality of the service. Thank you for such a useful site!"</p>
-                    <div class="testimonial-author">
-                        <img data-src="images/testimonial3-placeholder.jpg" alt="Sophie M." class="testimonial-avatar">
+
+                <div class="testimonial" itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
+                    <meta itemprop="position" content="2">
+                    <p itemprop="reviewBody">"The articles on the HealthCompare blog are a goldmine of information. I learned so much about at-home health tests and was able to make informed choices for my family."</p>
+                    <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <img data-src="images/testimonial2-placeholder.jpg" alt="Testimonial from Thomas R. about health tests information" class="testimonial-avatar" width="60" height="60" itemprop="image">
                         <div>
-                            <strong>Sophie M.</strong>
+                            <strong itemprop="name">Thomas R.</strong>
                             <span>User since 2023</span>
+                            <meta itemprop="datePublished" content="2023-11-22">
                         </div>
+                    </div>
+                    <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/BlogPosting">
+                        <meta itemprop="name" content="HealthCompare Health Tests Articles">
+                    </div>
+                    <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
+                    </div>
+                </div>
+
+                <div class="testimonial" itemprop="itemListElement" itemscope itemtype="https://schema.org/Review">
+                    <meta itemprop="position" content="3">
+                    <p itemprop="reviewBody">"The service recommendations are really relevant. I tried Teladoc on your advice and am impressed by the quality of the service. Thank you for such a useful site!"</p>
+                    <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <img data-src="images/testimonial3-placeholder.jpg" alt="Testimonial from Sophie M. about Teladoc service recommendations" class="testimonial-avatar" width="60" height="60" itemprop="image">
+                        <div>
+                            <strong itemprop="name">Sophie M.</strong>
+                            <span>User since 2023</span>
+                            <meta itemprop="datePublished" content="2023-09-10">
+                        </div>
+                    </div>
+                    <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/MedicalOrganization">
+                        <meta itemprop="name" content="Teladoc">
+                    </div>
+                    <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
                     </div>
                 </div>
             </div>

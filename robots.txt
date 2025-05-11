@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Allow all bots full access to the site
+Disallow: /pages/legal/admin/
+Disallow: /pages/legal/terms-draft.html
+Disallow: /css/*.map
+Disallow: /js/*.map
+
+# Specify XML Sitemap location
+Sitemap: https://www.healthcompare.com/sitemap.xml
