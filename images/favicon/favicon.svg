@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="100" fill="#051d51" />
+  
+  <!-- Health Symbol (Heart + Cross) -->
+  <g transform="translate(80, 80) scale(0.7)">
+    <!-- Heart shape -->
+    <path d="M256 448l-30-27c-99-90-164-149-164-222 0-59 48-107 107-107 34 0 67 16 87 42 20-26 53-42 87-42 59 0 107 48 107 107 0 73-65 132-164 222z" fill="#10b981" stroke="#ffffff" stroke-width="16" />
+    
+    <!-- Cross -->
+    <rect x="220" y="140" width="72" height="235" rx="10" fill="#ffffff" />
+    <rect x="128" y="230" width="256" height="72" rx="10" fill="#ffffff" />
+  </g>
+  
+  <!-- HC Letters -->
+  <g transform="translate(50, 330)">
+    <text font-family="Arial, sans-serif" font-weight="bold" font-size="110" fill="#ffffff">
+      <tspan x="150" y="70" text-anchor="middle">HC</tspan>
+    </text>
+  </g>
+</svg>

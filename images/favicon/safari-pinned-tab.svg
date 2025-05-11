@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="700.000000pt" height="700.000000pt" viewBox="0 0 700.000000 700.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created for HealthCompare
+</metadata>
+<g transform="translate(0.000000,700.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<!-- Simplified monochrome version for Safari pinned tab -->
+<path d="M2250 4900 c-365 -77 -638 -349 -719 -715 -28 -128 -28 -346 1 -475
+35 -159 130 -343 234 -454 38 -40 283 -268 545 -505 l476 -431 47 43 c25 24
+254 231 508 461 254 230 483 445 509 477 135 172 213 356 236 559 45 403 -163
+783 -525 961 -123 61 -213 83 -362 88 -118 4 -145 2 -230 -20 -137 -36 -239
+-87 -342 -173 l-88 -73 -87 73 c-49 40 -126 89 -173 109 -146 61 -328 82 -480
+55z"/>
+<path d="M3325 2615 l0 -535 -535 0 -535 0 0 -165 0 -165 535 0 535 0 0 -535
+0 -535 165 0 165 0 0 535 0 535 535 0 535 0 0 165 0 165 -535 0 -535 0 0 535
+0 535 -165 0 -165 0 0 -535z"/>
+</g>
+</svg>
