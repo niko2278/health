@@ -101,9 +101,12 @@
         <div class="popup-container">
             <button id="close-popup" class="popup-close" aria-label="Close popup">×</button>
             <h3>Save on Prescriptions!</h3>
-            <p>Get our free prescription discount card and save up to 80% on medications at over 70,000 US pharmacies.</p>
-            <img src="images/prescription-discount-card.webp" alt="Prescription Discount Card" class="popup-image">
-            <a href="#prescription-discount-card" class="btn btn-primary popup-cta" id="popup-cta">Get Your Free Card</a>
+            <p>Choose from our free prescription discount cards and save up to 80% on medications at over 70,000 US pharmacies.</p>
+            <div class="popup-cards">
+                <img src="images/prescription-discount-card.webp" alt="GoodRx Card" class="popup-image-small">
+                <img src="images/national-drug-card.webp.png" alt="National Drug Card" class="popup-image-small">
+            </div>
+            <a href="#prescription-discount-card" class="btn btn-primary popup-cta" id="popup-cta">Compare Free Cards</a>
         </div>
     </div>
 
@@ -376,9 +379,23 @@
                 <p>Get instant discounts on prescription medications with our free savings card – no insurance required. Valid in over 70,000 US pharmacies. Can also be used for certain pet medications.</p>
             </div>
             <div class="discount-card-content">
-                <img src="images/prescription-discount-card.webp" alt="Prescription Discount Card" class="discount-card-image">
-                <div class="cta-buttons">
-                    <a href="https://www.goodrx.com/pets" class="btn btn-primary" target="_blank" rel="sponsored noopener">Download Your Discount Card</a>
+                <div class="discount-cards-grid">
+                    <div class="discount-card-option">
+                        <img src="images/prescription-discount-card.webp" alt="Prescription Discount Card" class="discount-card-image">
+                        <h3>GoodRx Discount Card</h3>
+                        <p>Save up to 80% on prescriptions</p>
+                        <a href="https://www.goodrx.com/pets" class="btn btn-primary" target="_blank" rel="sponsored noopener">Get GoodRx Card</a>
+                    </div>
+                    <div class="discount-card-option">
+                        <img src="images/national-drug-card.webp.png" alt="National Drug Card" class="discount-card-image">
+                        <h3>National Drug Card</h3>
+                        <p>Free savings card accepted nationwide</p>
+                        <a href="https://www.nationaldrugcard.com" class="btn btn-primary" target="_blank" rel="sponsored noopener">Get National Drug Card</a>
+                    </div>
+                </div>
+                <div class="discount-comparison-info">
+                    <h3>Compare and Save</h3>
+                    <p>Both cards are free and can save you money. Compare prices at your pharmacy with both cards to get the best deal!</p>
                 </div>
             </div>
         </div>
