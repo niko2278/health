@@ -67,6 +67,7 @@ details[open] summary::after{content:"–"}
 details p{color:var(--muted);margin:10px 0 0}
 footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14px}
 footer .links a{color:var(--muted);margin-right:18px}
+.drugs-links{line-height:2;margin:0 0 20px}
 .disclosure{margin-top:14px;font-size:13px;max-width:60em}
 @media (max-width:760px){
   .pick{grid-template-columns:1fr;margin-top:-20px}
@@ -81,6 +82,7 @@ footer .links a{color:var(--muted);margin-right:18px}
   <header class="top">
     <a class="logo" href="/"><span>Rx</span>RxSavings Guide</a>
     <nav>
+      <a href="/drugs">Drug savings</a>
       <a href="#how">How it works</a>
       <a href="#cards">Get a card</a>
       <a href="#faq">FAQ</a>
@@ -169,6 +171,17 @@ footer .links a{color:var(--muted);margin-right:18px}
   </div>
 </section>
 
+<section id="drugs">
+  <div class="wrap">
+    <h2>Popular medications</h2>
+    <p class="sub">See how a free card can lower the price of common prescriptions.</p>
+    <p class="drugs-links">
+      <a href="/atorvastatin-coupon">Atorvastatin</a> · <a href="/lisinopril-coupon">Lisinopril</a> · <a href="/metformin-coupon">Metformin</a> · <a href="/amlodipine-coupon">Amlodipine</a> · <a href="/levothyroxine-coupon">Levothyroxine</a> · <a href="/sertraline-coupon">Sertraline</a> · <a href="/ozempic-coupon">Ozempic</a> · <a href="/eliquis-coupon">Eliquis</a> · <a href="/mounjaro-coupon">Mounjaro</a> · <a href="/jardiance-coupon">Jardiance</a>
+    </p>
+    <a class="btn" href="/drugs">See all 30 drugs</a>
+  </div>
+</section>
+
 <section id="faq">
   <div class="wrap">
     <h2>Questions</h2>
@@ -183,6 +196,7 @@ footer .links a{color:var(--muted);margin-right:18px}
 <footer>
   <div class="wrap">
     <div class="links">
+      <a href="/drugs">All drugs</a>
       <a href="/legal.html#terms">Terms</a>
       <a href="/legal.html#privacy">Privacy</a>
       <a href="/legal.html#disclosure">Affiliate disclosure</a>
@@ -193,17 +207,7 @@ footer .links a{color:var(--muted);margin-right:18px}
   </div>
 </footer>
 
-<script>
-// Replace these URLs with your own affiliate links when you have them.
-var CARD_LINKS = {
-  goodrx: "https://www.goodrx.com/",
-  ndc: "https://www.nationaldrugcard.com/"
-};
-document.querySelectorAll("[data-card]").forEach(function(a){
-  var u = CARD_LINKS[a.getAttribute("data-card")];
-  if (u) a.href = u;
-});
-document.getElementById("y").textContent = new Date().getFullYear();
-</script>
+<script src="/cards.js"></script>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
